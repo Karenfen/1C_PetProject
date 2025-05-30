@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<DataProcessor uuid="69d69f56-9ff3-4be9-b2e9-bf5a239bff79">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.ДобавлениеСотрудников" category="Object">
+				<xr:TypeId>a1370005-73c9-4866-99bb-e072d1243965</xr:TypeId>
+				<xr:ValueId>62a97c7c-58bb-4a18-a0fb-fbd19f207594</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.ДобавлениеСотрудников" category="Manager">
+				<xr:TypeId>fcc9b349-8a5a-4877-a293-8e963d4dd4e5</xr:TypeId>
+				<xr:ValueId>95ba7220-ee8a-4378-8cb8-33ab00ee80a0</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ДобавлениеСотрудников</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавление сотрудников</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Добавление сотрудников списком</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.ДобавлениеСотрудников.Form.Форма</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<TabularSection uuid="da199d90-85bf-4d37-bd65-d5886fb5b556">
+				<InternalInfo>
+					<xr:GeneratedType name="DataProcessorTabularSection.ДобавлениеСотрудников.СписокСотрудников" category="TabularSection">
+						<xr:TypeId>c81bc3f7-e4e0-45e8-ab6d-7d2b7b0ce6e4</xr:TypeId>
+						<xr:ValueId>b2dbc0ab-b782-4b74-9b27-926b547470b4</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DataProcessorTabularSectionRow.ДобавлениеСотрудников.СписокСотрудников" category="TabularSectionRow">
+						<xr:TypeId>564316ba-5857-4472-81b2-b7d6fa1b3e0b</xr:TypeId>
+						<xr:ValueId>fc3af908-0291-4149-a1fa-eb3532c6b547</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>СписокСотрудников</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список сотрудников</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Список сотрудников для добавления</Comment>
+					<ToolTip/>
+					<FillChecking>DontCheck</FillChecking>
+				</Properties>
+				<ChildObjects/>
+			</TabularSection>
+			<Form>Форма</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

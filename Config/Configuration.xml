@@ -105,7 +105,7 @@
 			<ConfigurationInformationAddress/>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<ObjectAutonumerationMode>NotAutoFree</ObjectAutonumerationMode>
-			<ModalityUseMode>DontUse</ModalityUseMode>
+			<ModalityUseMode>Use</ModalityUseMode>
 			<SynchronousPlatformExtensionAndAddInCallUseMode>DontUse</SynchronousPlatformExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
 			<CompatibilityMode>DontUse</CompatibilityMode>
@@ -113,9 +113,22 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
+			<Role>Сотрудник</Role>
+			<Role>HR_Менеджер</Role>
+			<Role>Администратор</Role>
+			<CommonTemplate>МакетОтчётаПоСотруднику</CommonTemplate>
+			<CommonModule>СотрдудникиОперации</CommonModule>
 			<Catalog>Сотрудники</Catalog>
+			<Document>ПриёмНаРаботу</Document>
+			<Document>ПереводСотрудника</Document>
 			<Enum>Должность</Enum>
 			<Enum>Подразделение</Enum>
+			<Enum>КадровыеДействия</Enum>
+			<Report>СотрудникиПодразделенияНаПериод</Report>
+			<Report>ШтатСотрудниковНаПериод</Report>
+			<DataProcessor>ДобавлениеСотрудников</DataProcessor>
+			<DataProcessor>КадровыеПерестановки</DataProcessor>
+			<InformationRegister>КадровыеПеремещения</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

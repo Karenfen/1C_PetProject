@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПровести" id="29">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.Command.Провести</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Провести и закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="30"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="Сотрудники" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Сотрудники</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СотрудникиКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СотрудникиКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СотрудникиРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СотрудникиСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СотрудникиСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СотрудникиСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СотрудникиСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СотрудникиУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СотрудникиУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СотрудникиНомерСтроки" id="14">
+					<DataPath>Объект.Сотрудники.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиНомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СотрудникиНомерСтрокиРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<InputField name="СотрудникиСотрудник" id="17">
+					<DataPath>Объект.Сотрудники.Сотрудник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиСотрудникКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СотрудникиСотрудникРасширеннаяПодсказка" id="19"/>
+					<Events>
+						<Event name="OnChange">СотрудникиСотрудникПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СотрудникиПодразделение" id="20">
+					<DataPath>Объект.Сотрудники.Подразделение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиПодразделениеКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СотрудникиПодразделениеРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="СотрудникиДолжность" id="23">
+					<DataPath>Объект.Сотрудники.Должность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиДолжностьКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СотрудникиДолжностьРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="СотрудникиОклад" id="26">
+					<DataPath>Объект.Сотрудники.Оклад</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиОкладКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СотрудникиОкладРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="СотрудникиДата" id="31">
+					<DataPath>Объект.Сотрудники.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиДатаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="СотрудникиДатаРасширеннаяПодсказка" id="33"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КадровыеПерестановки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Провести" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Провести</Action>
+		</Command>
+	</Commands>
+</Form>

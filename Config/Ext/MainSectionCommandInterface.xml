@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<CommandsVisibility>
+		<Command name="InformationRegister.КадровыеПеремещения.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Сотрудник">false</xr:Value>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПереводСотрудника.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Сотрудник">true</xr:Value>
+				<xr:Value name="Role.HR_Менеджер">false</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПриёмНаРаботу.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Сотрудник">false</xr:Value>
+				<xr:Value name="Role.HR_Менеджер">false</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Сотрудники.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Сотрудник">true</xr:Value>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПереводСотрудника.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПриёмНаРаботу.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Сотрудник">false</xr:Value>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Сотрудники.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Сотрудник">false</xr:Value>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.СотрудникиПодразделенияНаПериод.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ШтатСотрудниковНаПериод.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ДобавлениеСотрудников.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Сотрудник">false</xr:Value>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.КадровыеПерестановки.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+</CommandInterface>
