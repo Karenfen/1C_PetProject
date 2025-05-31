@@ -2,23 +2,35 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаПровести" id="29">
+			<Button name="ВыполнитьИЗакрыть" id="23">
 				<Type>CommandBarButton</Type>
-				<Representation>Text</Representation>
 				<DefaultButton>true</DefaultButton>
-				<OnlyInAllActions>true</OnlyInAllActions>
-				<CommandName>Form.Command.Провести</CommandName>
+				<CommandName>Form.Command.Выполнить</CommandName>
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Провести и закрыть</v8:content>
+						<v8:content>Выполнить и закрыть</v8:content>
 					</v8:item>
 				</Title>
-				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="30"/>
+				<ExtendedTooltip name="ВыполнитьИЗакрытьРасширеннаяПодсказка" id="24"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<ChildItems>
+		<InputField name="Подразделение" id="30">
+			<DataPath>Объект.Подразделение</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="32"/>
+			<Events>
+				<Event name="ChoiceProcessing">ПодразделениеОбработкаВыбора</Event>
+			</Events>
+		</InputField>
 		<Table name="Сотрудники" id="1">
 			<Representation>List</Representation>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -27,7 +39,21 @@
 			<DataPath>Объект.Сотрудники</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="СотрудникиКонтекстноеМеню" id="2"/>
-			<AutoCommandBar name="СотрудникиКоманднаяПанель" id="3"/>
+			<AutoCommandBar name="СотрудникиКоманднаяПанель" id="3">
+				<ChildItems>
+					<Button name="Очистить" id="33">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Очистить</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Очистить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ОчиститьРасширеннаяПодсказка" id="34"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="СотрудникиРасширеннаяПодсказка" id="4"/>
 			<SearchStringAddition name="СотрудникиСтрокаПоиска" id="5">
 				<AdditionSource>
@@ -69,32 +95,14 @@
 						<Event name="OnChange">СотрудникиСотрудникПриИзменении</Event>
 					</Events>
 				</InputField>
-				<InputField name="СотрудникиПодразделение" id="20">
-					<DataPath>Объект.Сотрудники.Подразделение</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СотрудникиПодразделениеКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="СотрудникиПодразделениеРасширеннаяПодсказка" id="22"/>
-				</InputField>
-				<InputField name="СотрудникиДолжность" id="23">
-					<DataPath>Объект.Сотрудники.Должность</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СотрудникиДолжностьКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="СотрудникиДолжностьРасширеннаяПодсказка" id="25"/>
-				</InputField>
-				<InputField name="СотрудникиОклад" id="26">
+				<InputField name="СотрудникиОклад" id="20">
 					<DataPath>Объект.Сотрудники.Оклад</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СотрудникиОкладКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="СотрудникиОкладРасширеннаяПодсказка" id="28"/>
+					<ContextMenu name="СотрудникиОкладКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СотрудникиОкладРасширеннаяПодсказка" id="22"/>
 					<Events>
 						<Event name="OnChange">СотрудникиОкладПриИзменении</Event>
 					</Events>
-				</InputField>
-				<InputField name="СотрудникиДата" id="31">
-					<DataPath>Объект.Сотрудники.Дата</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СотрудникиДатаКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="СотрудникиДатаРасширеннаяПодсказка" id="33"/>
 				</InputField>
 			</ChildItems>
 		</Table>
@@ -102,26 +110,41 @@
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>
-				<v8:Type>cfg:DataProcessorObject.КадровыеПерестановки</v8:Type>
+				<v8:Type>cfg:DataProcessorObject.ИзменениеОкладовМассово</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="Провести" id="1">
+		<Command name="Выполнить" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Провести</v8:content>
+					<v8:content>Выполнить</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Провести</v8:content>
+					<v8:content>Выполнить</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>Провести</Action>
+			<Action>КомандаВыполнить</Action>
+		</Command>
+		<Command name="Очистить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Очистить</Action>
 		</Command>
 	</Commands>
 </Form>

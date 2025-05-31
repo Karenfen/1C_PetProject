@@ -68,6 +68,12 @@
 				<Event name="OnChange">ДатаПриёмаПриИзменении</Event>
 			</Events>
 		</InputField>
+		<CheckBoxField name="Уволен" id="24">
+			<DataPath>Объект.Уволен</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="УволенКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="УволенРасширеннаяПодсказка" id="26"/>
+		</CheckBoxField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

@@ -118,9 +118,11 @@
 			<Role>Администратор</Role>
 			<CommonTemplate>МакетОтчётаПоСотруднику</CommonTemplate>
 			<CommonModule>СотрдудникиОперации</CommonModule>
+			<Constant>МРОТ</Constant>
 			<Catalog>Сотрудники</Catalog>
 			<Document>ПриёмНаРаботу</Document>
 			<Document>ПереводСотрудника</Document>
+			<Document>УвольнениеСотрудника</Document>
 			<Enum>Должность</Enum>
 			<Enum>Подразделение</Enum>
 			<Enum>КадровыеДействия</Enum>
@@ -128,6 +130,7 @@
 			<Report>ШтатСотрудниковНаПериод</Report>
 			<DataProcessor>ДобавлениеСотрудников</DataProcessor>
 			<DataProcessor>КадровыеПерестановки</DataProcessor>
+			<DataProcessor>ИзменениеОкладовМассово</DataProcessor>
 			<InformationRegister>КадровыеПеремещения</InformationRegister>
 		</ChildObjects>
 	</Configuration>

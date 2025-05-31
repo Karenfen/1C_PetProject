@@ -88,6 +88,12 @@
 					<ContextMenu name="ДолжностьКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="24"/>
 				</LabelField>
+				<CheckBoxField name="Уволен" id="31">
+					<DataPath>Список.Уволен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УволенКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="УволенРасширеннаяПодсказка" id="33"/>
+				</CheckBoxField>
 			</ChildItems>
 		</Table>
 	</ChildItems>

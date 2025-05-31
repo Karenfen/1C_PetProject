@@ -33,11 +33,20 @@
 				<xr:Value name="Role.Администратор">true</xr:Value>
 			</Visibility>
 		</Command>
+		<Command name="Document.УвольнениеСотрудника.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Сотрудник">false</xr:Value>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
 		<Command name="Document.ПереводСотрудника.StandardCommand.Create">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
 				<xr:Value name="Role.Администратор">true</xr:Value>
+				<xr:Value name="Role.Сотрудник">false</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="Document.ПриёмНаРаботу.StandardCommand.Create">
@@ -51,6 +60,14 @@
 		<Command name="Catalog.Сотрудники.StandardCommand.Create">
 			<Visibility>
 				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Сотрудник">false</xr:Value>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.УвольнениеСотрудника.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
 				<xr:Value name="Role.Сотрудник">false</xr:Value>
 				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
 				<xr:Value name="Role.Администратор">true</xr:Value>

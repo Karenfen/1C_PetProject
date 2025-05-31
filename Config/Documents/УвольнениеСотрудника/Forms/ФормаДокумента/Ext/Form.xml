@@ -27,27 +27,6 @@
 				<Event name="OnChange">СотрудникПриИзменении</Event>
 			</Events>
 		</InputField>
-		<InputField name="Подразделение" id="10">
-			<DataPath>Объект.Подразделение</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="11"/>
-			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="12"/>
-		</InputField>
-		<InputField name="Должность" id="13">
-			<DataPath>Объект.Должность</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ДолжностьКонтекстноеМеню" id="14"/>
-			<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="15"/>
-		</InputField>
-		<InputField name="Оклад" id="16">
-			<DataPath>Объект.Оклад</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ОкладКонтекстноеМеню" id="17"/>
-			<ExtendedTooltip name="ОкладРасширеннаяПодсказка" id="18"/>
-			<Events>
-				<Event name="OnChange">ОкладПриИзменении</Event>
-			</Events>
-		</InputField>
 		<InputField name="Дата" id="19">
 			<DataPath>Объект.Date</DataPath>
 			<ContextMenu name="ДатаКонтекстноеМеню" id="20"/>
@@ -57,7 +36,7 @@
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>
-				<v8:Type>cfg:DocumentObject.ПриёмНаРаботу</v8:Type>
+				<v8:Type>cfg:DocumentObject.УвольнениеСотрудника</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
