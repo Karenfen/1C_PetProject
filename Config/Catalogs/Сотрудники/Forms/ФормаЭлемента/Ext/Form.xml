@@ -20,6 +20,7 @@
 	<Events>
 		<Event name="NewWriteProcessing">ОбработкаЗаписиНового</Event>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
 	<ChildItems>

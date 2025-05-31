@@ -13,7 +13,7 @@
 			<Visibility>
 				<xr:Common>true</xr:Common>
 				<xr:Value name="Role.Сотрудник">true</xr:Value>
-				<xr:Value name="Role.HR_Менеджер">false</xr:Value>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
 				<xr:Value name="Role.Администратор">true</xr:Value>
 			</Visibility>
 		</Command>
@@ -21,7 +21,7 @@
 			<Visibility>
 				<xr:Common>true</xr:Common>
 				<xr:Value name="Role.Сотрудник">false</xr:Value>
-				<xr:Value name="Role.HR_Менеджер">false</xr:Value>
+				<xr:Value name="Role.HR_Менеджер">true</xr:Value>
 				<xr:Value name="Role.Администратор">true</xr:Value>
 			</Visibility>
 		</Command>
